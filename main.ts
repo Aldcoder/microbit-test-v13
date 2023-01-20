@@ -21,7 +21,7 @@ basic.showString("D",5)
     }
 })
 input.onButtonPressed(Button.AB, function () {
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 5; index++) {
         music.playMelody("D E D E F E F E ", 300)
     }
 })
