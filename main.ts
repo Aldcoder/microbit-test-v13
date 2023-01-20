@@ -21,7 +21,9 @@ basic.showString("D",5)
     }
 })
 input.onButtonPressed(Button.AB, function () {
-    music.playMelody("D E D E F E F E ", 300)
+    for (let index = 0; index < 4; index++) {
+        music.playMelody("D E D E F E F E ", 300)
+    }
 })
 input.onButtonPressed(Button.B, function () {
     basic.showString("Hello!")
@@ -29,7 +31,7 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
     basic.showIcon(IconNames.Sad)
 })
-basic.forever(function () {
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
     while (input.logoIsPressed()) {
         basic.showLeds(`
             # # # # #
